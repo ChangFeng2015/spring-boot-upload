@@ -15,9 +15,12 @@ public class HelloController
     @Value("${cup.maxSize}")
     private String cupMaxSize;
 
+    @Value("${cup.content}")
+    private String content;
+
     @RequestMapping(value = "/hello",method = RequestMethod.GET)
     public String hello()
     {
-        return cupMaxSize;
+        return content;
     }
 }

@@ -4,3 +4,4 @@ server:
 cup:
   maxSize: F
   minSize: A
+  content: "cupMaxSize: ${cup.maxSize},minSize: ${cup.minSize}"
