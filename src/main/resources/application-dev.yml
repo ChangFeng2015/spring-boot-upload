@@ -1,0 +1,8 @@
+#开发环境的配置
+server:
+  port: 8080
+  context-path: /boot
+cup:
+  maxSize: B
+  minSize: A
+  content: "cupMaxSize: ${cup.maxSize},minSize: ${cup.minSize}"

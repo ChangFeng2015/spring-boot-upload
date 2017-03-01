@@ -1,6 +1,7 @@
 package com.springboot.controller;
 
 import com.springboot.properties.CupProperties;
+import com.springboot.properties.ServerPorperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,6 +17,9 @@ public class PropertyController
     @Autowired
     private CupProperties cupProperties;
 
+    @Autowired
+    private ServerPorperties serverPorperties;
+
     @RequestMapping(value = "/cupInfo")
     public String getCupInfo()
     {
@@ -23,4 +27,11 @@ public class PropertyController
                 + cupProperties.getMaxSize()
                 + cupProperties.getMinSize();
     }
+
+    @RequestMapping(value = "/serverInfo")
+    public String getServerInfo()
+    {
+        return serverPorperties.getContextPath();
+    }
+
 }

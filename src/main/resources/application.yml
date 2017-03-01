@@ -1,7 +1,4 @@
-server:
-  port: 8081
-  context-path: /boot
-cup:
-  maxSize: F
-  minSize: A
-  content: "cupMaxSize: ${cup.maxSize},minSize: ${cup.minSize}"
+#开发环境和生产环境配置切换的位置
+spring:
+  profiles:
+    active: product
