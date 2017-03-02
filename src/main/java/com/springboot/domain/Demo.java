@@ -1,13 +1,25 @@
 package com.springboot.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 /**
  * Created by Dave on 2017/3/2.
  */
+@Entity
 public class Demo
 {
+    @Id
+    @GeneratedValue
     private long id;
     private String userName;
     private int age;
+
+    public Demo()
+    {
+
+    }
 
     public long getId() {
         return id;
