@@ -1,5 +1,6 @@
 package com.springboot.controller;
 
+import com.springboot.Service.DemoService;
 import com.springboot.domain.Demo;
 import com.springboot.repository.DemoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +17,9 @@ public class DemoController
 {
     @Autowired
     private DemoRepository demoRepository;
+
+    @Autowired
+    private DemoService demoService;
 
     /**
      * 获取demo列表
@@ -86,6 +90,12 @@ public class DemoController
         {
             demoRepository.delete(id);
         }
+    }
+
+    @GetMapping(value = "/demoes/two")
+    public void insertTwoDemoes()
+    {
+        demoService.insrtTwo();
     }
 
 }
