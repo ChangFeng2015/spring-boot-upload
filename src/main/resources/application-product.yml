@@ -1,7 +1,7 @@
 #生产环境的配置
 server:
   port: 8081
-  context-path: /boot
+  context-path: 
 cup:
   maxSize: F
   minSize: A

@@ -5,6 +5,7 @@ import com.springboot.domain.Demo;
 import com.springboot.repository.DemoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
@@ -29,6 +30,13 @@ public class DemoController
     public List<Demo> demoList()
     {
         return demoRepository.findAll();
+    }
+    
+    @GetMapping(value = "/ws")
+    public ModelAndView wsPage()
+    {
+    	ModelAndView modelAndView = new ModelAndView("/ws");
+    	return modelAndView;
     }
 
     /**
