@@ -1,8 +1,5 @@
-#生产环境的配置
 server:
   port: 8081
-  context-path: 
-cup:
-  maxSize: F
-  minSize: A
-  content: "cupMaxSize: ${cup.maxSize},minSize: ${cup.minSize}"
+girl:
+  cupSize: F
+  age: 18
